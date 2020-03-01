@@ -1,9 +1,17 @@
-import React from 'react';
-import './App.css';
-import { button } from 'react-bootstrap';
+import React, { Component } from 'react';
+import './App.scss';
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 
-function App() {
-	return null;
+class App extends Component {
+	render() {
+		return (
+			<div className='App'>
+				<Navbar />
+				<Footer />
+			</div>
+		);
+	}
 }
 
 export default App;
