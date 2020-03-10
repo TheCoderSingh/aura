@@ -1,1 +1,9 @@
-$secondary-color: #224651
+$secondary-color: #224651;
+
+.container-fluid, .col {
+	padding: 0;
+}
+
+.row {
+	margin: 0;
+}
