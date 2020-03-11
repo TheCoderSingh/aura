@@ -8,7 +8,7 @@ class Header extends Component {
 			<Row>
 				<Col>
 					<header>
-						<video autoPlay loop>
+						<video autoPlay loop muted>
 							<source type="video/mp4" src={process.env.PUBLIC_URL + '/video.mp4'}></source>
 						</video>
 					</header >
