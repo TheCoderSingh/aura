@@ -20,10 +20,6 @@ class GoogleMap extends Component {
 					}}
 				/>
 				{/* </Map > */}
-				<Marker position={{
-					lat: 48.00,
-					lng: -122.00
-				}}
 				/>
 			</div >
 		);
