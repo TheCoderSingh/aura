@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.scss';
 import Navbar from './components/navbar/navbar';
 import Header from './components/header/header';
-import Map from './components/map/map';
+import Filter from './components/filters/filters';
+import GoogleMap from './components/map/map';
 import Footer from './components/footer/footer';
 import { Container } from 'react-bootstrap';
 
@@ -13,7 +14,8 @@ class App extends Component {
 				<Container fluid>
 					<Navbar />
 					<Header />
-					<Map />
+					<Filter />
+					<GoogleMap />
 					<Footer />
 				</Container>
 			</div>
