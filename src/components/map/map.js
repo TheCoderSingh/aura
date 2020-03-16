@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
+import './map.scss';
 
 class GoogleMap extends Component {
 	render() {
@@ -9,7 +10,7 @@ class GoogleMap extends Component {
 		};
 
 		return (
-			<div>
+			<div className="map-container">
 				<Map
 					google={this.props.google}
 					zoom={8}
