@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './filters.scss';
 import { Row, Col, Form, Button } from 'react-bootstrap';
+import Graph from '../graph/graph';
 
 class Filter extends Component {
 	render() {
@@ -13,13 +14,13 @@ class Filter extends Component {
 								<Form.Group as={Col} controlId="formFilters">
 									{/* <Form.label>Choose a country</Form.Label> */}
 									<Form.Control as="select">
-										<option value="Select Country" selected>Select Country</option>
+										<option value="Select Country" defaultValue>Select Country</option>
 									</Form.Control>
 									<Form.Control as="select">
-										<option value="Select Province" selected>Select Province</option>
+										<option value="Select Province" defaultValue>Select Province</option>
 									</Form.Control>
 									<Form.Control as="select">
-										<option value="Select City" selected>Select City</option>
+										<option value="Select City" defaultValue>Select City</option>
 									</Form.Control>
 									<Form.Control type="date">
 									</Form.Control>
@@ -31,7 +32,7 @@ class Filter extends Component {
 						</div>
 					</Col>
 					<Col xs={9}>
-
+						<Graph />
 					</Col>
 				</Row>
 			</div >
