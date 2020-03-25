@@ -4,7 +4,8 @@ import FilterData from './FilterData';
 
 class Filter extends Component {
 	state = {
-		countries: []
+		countries: [],
+		states: []
 	}
 
 	componentDidMount() {
@@ -13,13 +14,17 @@ class Filter extends Component {
 			.then((data) => {
 				this.setState({ countries: data })
 			})
-			.catch(console.log())
+			.catch(console.log());
 	}
 
 	render() {
 		return (
-			<FilterData countries={this.state.countries} />
-		)
+			<FilterData countries={this.state.countries} states={this.state.states} />
+			(
+				this.setState({
+					states: this.state.states
+				});
+			)
 	}
 }
 
