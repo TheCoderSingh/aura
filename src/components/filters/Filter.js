@@ -97,6 +97,7 @@ class Filter extends Component {
 		return (
 			<div id="filters-container">
 				<Row>
+					<Col xs={1}></Col>
 					<Col xs={3}>
 						<div className="filters-box">
 							<Form>
@@ -122,7 +123,8 @@ class Filter extends Component {
 							</Form>
 						</div>
 					</Col>
-					<Col xs={9}>
+					<Col xs={2}></Col>
+					<Col xs={6}>
 						<Graph />
 					</Col>
 				</Row>
