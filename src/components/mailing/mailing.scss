@@ -1,0 +1,45 @@
+@import '../../App.scss';
+
+.mailingListContainer {
+	margin: 0 auto;
+}
+
+.mailingList {
+	margin: 4em 0;
+	text-align: left;
+	border-left: solid 1px #777;
+	padding: 5px 0 0 30px;
+}
+
+#mailingBtn {
+	width: 100%;
+	background-color: $secondary-color;
+}
+
+.mailingList h4 {
+	color: $secondary-color;
+}
+
+.mailingList input, #mailingBtn {
+	border-radius: 0;
+}
+
+.mailingList input {
+	font-size: 0.8em;
+	border: 1px solid #777;
+}
+
+.bgCircle {
+	height: 300%;
+	width: 100%;
+	border-radius: 100% 100% 0 0;
+	background-color: $accent-color;
+	position: absolute;
+	z-index: -1;
+}
+
+#mailingListOuter {
+	max-height: 300px;
+	overflow: hidden;
+	position: relative;
+}
