@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/aura/static/css/main.95a4d1e3.chunk.css",
-    "main.js": "/aura/static/js/main.55bf1a37.chunk.js",
-    "main.js.map": "/aura/static/js/main.55bf1a37.chunk.js.map",
+    "main.css": "/aura/static/css/main.11d24515.chunk.css",
+    "main.js": "/aura/static/js/main.97af8570.chunk.js",
+    "main.js.map": "/aura/static/js/main.97af8570.chunk.js.map",
     "runtime-main.js": "/aura/static/js/runtime-main.39404d49.js",
     "runtime-main.js.map": "/aura/static/js/runtime-main.39404d49.js.map",
-    "static/js/2.a2dcd13f.chunk.js": "/aura/static/js/2.a2dcd13f.chunk.js",
-    "static/js/2.a2dcd13f.chunk.js.map": "/aura/static/js/2.a2dcd13f.chunk.js.map",
+    "static/js/2.13087d86.chunk.js": "/aura/static/js/2.13087d86.chunk.js",
+    "static/js/2.13087d86.chunk.js.map": "/aura/static/js/2.13087d86.chunk.js.map",
     "index.html": "/aura/index.html",
-    "precache-manifest.a9fcd187c5c9db7a922195861b5db25c.js": "/aura/precache-manifest.a9fcd187c5c9db7a922195861b5db25c.js",
+    "precache-manifest.e229ebc0bfb9492777f53e81691ee0b4.js": "/aura/precache-manifest.e229ebc0bfb9492777f53e81691ee0b4.js",
     "service-worker.js": "/aura/service-worker.js",
-    "static/css/main.95a4d1e3.chunk.css.map": "/aura/static/css/main.95a4d1e3.chunk.css.map",
-    "static/js/2.a2dcd13f.chunk.js.LICENSE.txt": "/aura/static/js/2.a2dcd13f.chunk.js.LICENSE.txt"
+    "static/css/main.11d24515.chunk.css.map": "/aura/static/css/main.11d24515.chunk.css.map",
+    "static/js/2.13087d86.chunk.js.LICENSE.txt": "/aura/static/js/2.13087d86.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.39404d49.js",
-    "static/js/2.a2dcd13f.chunk.js",
-    "static/css/main.95a4d1e3.chunk.css",
-    "static/js/main.55bf1a37.chunk.js"
+    "static/js/2.13087d86.chunk.js",
+    "static/css/main.11d24515.chunk.css",
+    "static/js/main.97af8570.chunk.js"
   ]
 }
