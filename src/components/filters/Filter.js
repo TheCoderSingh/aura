@@ -17,7 +17,9 @@ class Filter extends Component {
 		states: [],
 		stateSelected: false,
 		selectedStateId: "",
-		cities: []
+		cities: [],
+		citySelected: false,
+		selectedCity: ""
 	};
 
 	async componentDidMount() {
@@ -90,7 +92,19 @@ class Filter extends Component {
 				selectedStateId: selectedStateId,
 				cities: [...this.state.cities, this.getCities(selectedStateId)]
 			});
-		console.log(stateSel);
+	};
+
+	saveCity = (cityName) => {
+		let citySel = document.getElementById("city-sel");
+		let selectedCityId = citySel.options[citySel.selectedIndex].id;
+		let selectedCity = citySel.options[citySel.selectedIndex].value;
+
+		if (selectedCityId !== "ct0") {
+			this.setState({
+				citySelected: true,
+				selectedCity: selectedCity,
+			});
+		}
 	};
 
 	render() {
@@ -110,7 +124,7 @@ class Filter extends Component {
 										<option value="Select Province" id="s0" defaultValue>Select Province/State</option>
 										<State states={this.state.states} />
 									</Form.Control>
-									<Form.Control as="select" id="city-sel">
+									<Form.Control as="select" id="city-sel" onChange={this.saveCity}>
 										<option value="Select City" id="ct0" defaultValue>Select City</option>
 										<City cities={this.state.cities} />
 									</Form.Control>
