@@ -1,0 +1,26 @@
+@import '../../App.scss';
+
+.contactForm
+{
+    box-shadow: black;
+    border: solid 1px darkgray;
+    padding: 5%;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+    bottom: 20%;
+}
+
+.mt-1
+{
+    margin-bottom: 10%;
+}
+
+.contact_btn
+{
+    width: 100%;
+    background-color: $secondary-color;
+}

@@ -3,6 +3,11 @@ import Chart from 'chart.js';
 import './graph.scss';
 
 class Graph extends Component {
+	constructor(props) {
+		super(props);
+		console.log(props);
+	}
+
 	render() {
 		return (
 			<canvas id="aqiGraph"></canvas>
@@ -12,13 +17,14 @@ class Graph extends Component {
 	componentDidMount() {
 		let aqiGraph = document.getElementById("aqiGraph");
 
-		let colors = ['#00ff00', '#ffff00', '#ff9900', '#ff0000', '#a64d79', '#cc0000'];
+		let colors = ['#00ff00', '#ffff00', '#ff9900', '#ff0000', '#a64d79', '#cc0000', '#eeaabb'];
 		let chartData = {
-			labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+			labels: ["April 05", "April 06", "April 07", "April 08", "April 09", "April 10", "April 11", "April 12"],
 			datasets: [{
-				data: [5, 10, 20, 30, 40, 50, 60, 70, 80, 90],
+				data: [146, 140, 134, 154, 155, 132, 136, 145],
+				// data: data,
 				backgroundColor: colors,
-				barPercentage: 1
+				barPercentage: 0.6
 			}]
 		};
 
@@ -29,6 +35,10 @@ class Graph extends Component {
 				options: {
 					legend: {
 						display: false
+					},
+					title: {
+						display: true,
+						text: 'AQI Index'
 					}
 				}
 			});

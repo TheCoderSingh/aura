@@ -1,0 +1,57 @@
+@import '../../App.scss';
+
+.teamCol
+{
+    text-align: center;
+    color: $secondary-color;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-items:  center;
+}
+
+.teamImg
+{
+    border: 1px solid $secondary-color;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.teamRow
+{
+    justify-content: center;
+}
+
+.teamCol hr
+{   
+    width: 45px;
+    height: 2px;
+}
+
+.teamCol div{
+    margin: 0;
+    padding: 0;
+    color: burlywood;
+    font-style: italic;
+    font-size: 13px;
+    height: 10%;
+    align-content: center;
+    
+}
+
+.teamRow div{
+    margin: 30px;
+}
+
+hr
+{
+    background-color: $secondary-color;
+    height: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h7
+{
+    font-style: italic;
+    color: $secondary-color;
+    font-size: 15px;
+}

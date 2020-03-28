@@ -8,6 +8,7 @@ import City from './City';
 
 let states = [];
 let cities = [];
+let aqi;
 
 class Filter extends Component {
 	state = {
@@ -94,10 +95,12 @@ class Filter extends Component {
 			});
 	};
 
-	saveCity = (cityName) => {
+	saveCity = () => {
 		let citySel = document.getElementById("city-sel");
 		let selectedCityId = citySel.options[citySel.selectedIndex].id;
 		let selectedCity = citySel.options[citySel.selectedIndex].value;
+
+		console.log(selectedCity);
 
 		if (selectedCityId !== "ct0") {
 			this.setState({
@@ -105,9 +108,30 @@ class Filter extends Component {
 				selectedCity: selectedCity,
 			});
 		}
+
+		console.log(this.state.selectedCity);
+	};
+
+	async checkAqi() {
+		const token = "0eb4bf0012292cbdc57e682530d1f6a352894d7e";
+		// const city = this.state.selectedCity;
+		const aqiUrl = `https://api.waqi.info/feed/vancouver/?token=${token}`;
+
+		await fetch(aqiUrl)
+			.then(res => res.json())
+			.then((data) => {
+				aqi = data.data.aqi;
+			})
+			.catch((error) => {
+				console.log("Error fetching AQI: " + error);
+			});
 	};
 
 	render() {
+		let graph;
+		if (aqi !== undefined) {
+			graph = <Graph data={aqi} />;
+		}
 		return (
 			<div id="filters-container">
 				<Row>
@@ -131,7 +155,7 @@ class Filter extends Component {
 									<Form.Control type="date">
 									</Form.Control>
 								</Form.Group>
-								<Button variant="primary" type="submit">
+								<Button variant="primary" type="button" onClick={this.checkAqi}>
 									Check AQI
  								</Button>
 							</Form>
@@ -139,6 +163,7 @@ class Filter extends Component {
 					</Col>
 					<Col xs={2}></Col>
 					<Col xs={6}>
+						{graph}
 						<Graph />
 					</Col>
 				</Row>
