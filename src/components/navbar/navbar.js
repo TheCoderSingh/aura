@@ -21,22 +21,20 @@ class NavbarTop extends Component {
 								<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 								<Navbar.Collapse id="responsive-navbar-nav">
 									<Nav className="mr-auto">
-										{/* <Route path="/aura" component={App} /><Nav.Link >Home</Nav.Link> */}
-										{/* <Nav.Link href="/home">Home</Nav.Link> */}
-										{/* <Nav.Link href="/iaura">iAura</Nav.Link>
-										<Nav.Link href="/team">Team</Nav.Link>
-										<Nav.Link href="/contact">Contact</Nav.Link> */}
-										<Nav.Link><Link to="/home">Home</Link></Nav.Link>
-										<Nav.Link><Link to="/iaura">iAura</Link></Nav.Link>
-										<Nav.Link><Link to="/team">Team</Link></Nav.Link>
-										<Nav.Link><Link to="/contact">Contact</Link></Nav.Link>
+										{/* <Nav.Link><Link to="/home">Home</Link></Nav.Link> */}
+										{/* <Nav.Link><Link to="/iaura">iAura</Link></Nav.Link> */}
+										{/* <Nav.Link><Link to="/team">Team</Link></Nav.Link> */}
+										{/* <Nav.Link><Link to="/contact">Contact</Link></Nav.Link> */}
+										<Link to="/home">Home</Link>
+										<Link to="/iaura">iAura</Link>
+										<Link to="/team">Team</Link>
+										<Link to="/contact">Contact</Link>
 									</Nav>
 								</Navbar.Collapse>
 							</Navbar >
 						</Col>
 					</Row>
 				</div>
-
 			</div>
 		);
 	}

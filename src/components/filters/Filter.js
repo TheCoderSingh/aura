@@ -20,7 +20,10 @@ class Filter extends Component {
 		selectedStateId: "",
 		cities: [],
 		citySelected: false,
-		selectedCity: ""
+		selectedCity: "",
+		dateSelected: false,
+		selectedDate: "",
+		aqi: ""
 	};
 
 	async componentDidMount() {
@@ -100,27 +103,52 @@ class Filter extends Component {
 		let selectedCityId = citySel.options[citySel.selectedIndex].id;
 		let selectedCity = citySel.options[citySel.selectedIndex].value;
 
-		console.log(selectedCity);
-
 		if (selectedCityId !== "ct0") {
 			this.setState({
 				citySelected: true,
 				selectedCity: selectedCity,
 			});
 		}
-
-		console.log(this.state.selectedCity);
 	};
 
-	async checkAqi() {
+	saveDate = () => {
+		console.log("Works..");
+		let dateSel = document.getElementById("date-sel");
+		let selectedDate = dateSel.value;
+
+		console.log(selectedDate);
+
+		if (selectedDate !== "yyyy-mm-dd") {
+			this.setState({
+				dateSelected: true,
+				selectedDate: selectedDate,
+			});
+		}
+		else {
+			this.setState({
+				dateSelected: false,
+				selectedDate: "",
+			});
+		}
+	};
+
+	async checkAqi(cityName) {
 		const token = "0eb4bf0012292cbdc57e682530d1f6a352894d7e";
-		// const city = this.state.selectedCity;
-		const aqiUrl = `https://api.waqi.info/feed/vancouver/?token=${token}`;
+		const city = cityName;
+		const aqiUrl = `https://api.waqi.info/feed/${city}/?token=${token}`;
 
 		await fetch(aqiUrl)
 			.then(res => res.json())
 			.then((data) => {
 				aqi = data.data.aqi;
+				console.log(aqi);
+				if (aqi !== undefined) {
+					this.setState({
+						aqi: aqi
+					});
+				} else {
+					alert(`AQI not available for ${this.state.selectedCity}`);
+				}
 			})
 			.catch((error) => {
 				console.log("Error fetching AQI: " + error);
@@ -128,10 +156,6 @@ class Filter extends Component {
 	};
 
 	render() {
-		let graph;
-		if (aqi !== undefined) {
-			graph = <Graph data={aqi} />;
-		}
 		return (
 			<div id="filters-container">
 				<Row>
@@ -152,10 +176,10 @@ class Filter extends Component {
 										<option value="Select City" id="ct0" defaultValue>Select City</option>
 										<City cities={this.state.cities} />
 									</Form.Control>
-									<Form.Control type="date">
+									<Form.Control type="date" id="date-sel" onChange={this.saveDate}>
 									</Form.Control>
 								</Form.Group>
-								<Button variant="primary" type="button" onClick={this.checkAqi}>
+								<Button variant="primary" type="button" onClick={this.checkAqi.bind(this, this.state.selectedCity)}>
 									Check AQI
  								</Button>
 							</Form>
@@ -163,8 +187,7 @@ class Filter extends Component {
 					</Col>
 					<Col xs={2}></Col>
 					<Col xs={6}>
-						{graph}
-						<Graph />
+						<Graph data={this.state.aqi} date={this.state.selectedDate} />
 					</Col>
 				</Row>
 			</div >
