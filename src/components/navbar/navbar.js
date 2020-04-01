@@ -12,19 +12,14 @@ class NavbarTop extends Component {
 					<Row>
 						<Col xs={9}>
 							<div className="logo">
-								{/* <img src={process.env.PUBLIC_URL + '/images/logo.svg'} /> */}
+								{/* <img src={process.env.PUBLIC_URL + '/images/logo.png'} /> */}
 							</div>
 						</Col>
 						<Col xs={3}>
 							<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-								{/* <Navbar.Brand href="/#">Aura</Navbar.Brand> */}
 								<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 								<Navbar.Collapse id="responsive-navbar-nav">
 									<Nav className="mr-auto">
-										{/* <Nav.Link><Link to="/home">Home</Link></Nav.Link> */}
-										{/* <Nav.Link><Link to="/iaura">iAura</Link></Nav.Link> */}
-										{/* <Nav.Link><Link to="/team">Team</Link></Nav.Link> */}
-										{/* <Nav.Link><Link to="/contact">Contact</Link></Nav.Link> */}
 										<Link to="/home">Home</Link>
 										<Link to="/iaura">iAura</Link>
 										<Link to="/team">Team</Link>

@@ -67,3 +67,19 @@ header {
 .headerText-right p {
 	color: #fff;
 }
+
+.aqiMsg {
+	color: $secondary-color;
+	margin: 20px auto;
+}
+
+.aqiMsg h2 {
+	font-size: 18px;
+	padding: 20px 0;
+}
+
+.aqiMsg hr {
+	margin-top: -20px;
+	width: 50%;
+	background-color: $tertiary-color;
+}
