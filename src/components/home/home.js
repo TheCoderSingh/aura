@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../header/header';
 import Filter from '../filters/Filter';
-import GoogleMap from '../map/map';
 import Mailing from '../mailing/mailing';
+import GoogleMap from '../map/GoogleMap';
 
 class Home extends Component {
 	render() {

@@ -2,6 +2,7 @@
 
 .navbarTop {
 	background-color: $secondary-color;
+	min-height: 85px;
 }
 .navbar {
 	background-color: $secondary-color !important;
@@ -11,8 +12,19 @@
 	color: #fff;
 }
 
-.logo {
-	// width: 13px;
-	// margin-top: -40px;
-	// // margin-bottom: -12px;
+// .logo {
+// 	width: 13px;
+// 	margin: 0;
+// }
+
+.navbar a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+	font-weight: bold;
+}
+
+.navbar a:first-child {
+	padding-left: 0;
 }
