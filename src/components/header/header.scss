@@ -15,13 +15,10 @@ video {
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-	// opacity: 0.6;
 }
 
 header {
 	position: relative;
-	height: 50vh;
-	// min-height: 25rem;
 	width: 100%;
 	overflow: hidden;
 }
@@ -74,7 +71,7 @@ header {
 }
 
 .aqiMsg h2 {
-	font-size: 18px;
+	font-size: 24px;
 	padding: 20px 0;
 }
 
@@ -82,4 +79,40 @@ header {
 	margin-top: -20px;
 	width: 50%;
 	background-color: $tertiary-color;
+}
+
+@media only screen and (max-width: 1200px) {
+	.headerText-left {
+		text-align: center !important;
+	}
+
+	.headerText .col-6 {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.headerText {
+		display: block !important;
+	}
+
+	.headerText-right {
+		margin: 0 auto;
+		margin-bottom: 40px !important;
+	}
+
+	header video {
+		transform: translateX(-50%) translateY(0);
+	}
+
+	.headerText-left h3, .headerText-left h1, .headerText-left > p {
+		color: $dark-color;
+	}
+
+	.aqiMsg {
+		text-align: center;
+	}
+	
+	.aqiMsg hr {
+		width: 30%;
+	}
 }

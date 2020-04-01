@@ -157,10 +157,10 @@ class Filter extends Component {
 
 	render() {
 		return (
-			<div id="filters-container">
+			<div id="filters-container" >
 				<Row>
 					<Col xs={1}></Col>
-					<Col xs={3}>
+					<Col xs={3} className="vertical-center">
 						<div className="filters-box">
 							<Form>
 								<Form.Group as={Col}>
@@ -185,8 +185,7 @@ class Filter extends Component {
 							</Form>
 						</div>
 					</Col>
-					<Col xs={2}></Col>
-					<Col xs={6}>
+					<Col xs={8}>
 						<Graph data={this.state.aqi} date={this.state.selectedDate} />
 					</Col>
 				</Row>

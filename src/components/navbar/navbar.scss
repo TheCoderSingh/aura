@@ -2,10 +2,10 @@
 
 .navbarTop {
 	background-color: $secondary-color;
-	min-height: 85px;
 }
 .navbar {
 	background-color: $secondary-color !important;
+	text-align: right;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -25,6 +25,3 @@
 	font-weight: bold;
 }
 
-.navbar a:first-child {
-	padding-left: 0;
-}

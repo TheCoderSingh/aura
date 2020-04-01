@@ -11,14 +11,12 @@
 
 .filters-box {
 	background-color: #fff;
-	margin-bottom: 15px;
 	padding: 15px;
-	margin-top: 20px;
 }
 
 .filters-box form {
 	background-color: $accent-color;
-	padding: 20px;
+	padding: 150px 20px;
 }
 
 .filters-box input, .filters-box select {
@@ -30,4 +28,18 @@
 	background-color: $secondary-color;
 	width: 100%;
 	border-radius: 0;
+	margin-top: 20px;
+}
+
+#filters-container .col-1, #filters-container .col-2, #filters-container .col-3, #filters-container .col-8 {
+	padding: 0;
+}
+
+.vertical-center {
+	display: flex;
+	align-items: center;
+}
+
+#filters-container {
+	padding: 40px 0;
 }
