@@ -16,7 +16,7 @@ class NavbarTop extends Component {
 							</div>
 						</Col>
 						<Col xs={3}>
-							<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+							<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
 								<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 								<Navbar.Collapse id="responsive-navbar-nav">
 									<Nav className="mr-auto">
