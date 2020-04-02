@@ -1,7 +1,7 @@
-
 import React, { Component } from 'react';
 import './team.scss';
 import { Container, Image, Row, Col } from 'react-bootstrap';
+import AboutUs from '../aboutus/aboutus';
 
 class Team extends Component {
     render() {
@@ -17,7 +17,7 @@ class Team extends Component {
                 <Row className="teamRow">
 
                     <Col xs={8} md={2} className="teamCol">
-                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/jaskaran.jpg'} width="160" height="160" roundedCircle />
+                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/jaskaran2.jpg'} width="160" height="160" roundedCircle />
                         <h6>Jaskaran Singh</h6>
                         <hr className="hr2"></hr>
                         Project Manager/Full-Stack developer
@@ -62,7 +62,7 @@ class Team extends Component {
                     </Col>
                     <Col xs={8} md={2} className="teamCol">
 
-                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/param.jpg'} width="160" height="160" roundedCircle />
+                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/param2.jpeg'} width="160" height="160" roundedCircle />
                         <h6>Parminder Kaur</h6>
                         <hr></hr>
                        UX/UI/Graphic Designer
@@ -71,7 +71,7 @@ class Team extends Component {
                     </Col>
                     <Col xs={8} md={2} className="teamCol">
 
-                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/raman.jpg'} width="160" height="160" roundedCircle />
+                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/raman.png'} width="160" height="160" roundedCircle />
                         <h6>Ramandeep Kaur</h6>
                         <hr></hr>
                        UX Designer
@@ -88,6 +88,7 @@ class Team extends Component {
 
                     </Col>
                 </Row>
+                <AboutUs />
             </Container>
         );
     }
