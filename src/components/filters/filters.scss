@@ -43,3 +43,25 @@
 #filters-container {
 	padding: 40px 0;
 }
+
+@media only screen and (max-width: 940px) {
+	#filters-container .col-3 {
+		max-width: 100%;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#filters-container .col-8 {
+		width: 100%;
+		max-width: 100%;
+		flex: none;
+	}
+
+	.filters-box form {
+		padding: 40px 40px;
+	}
+
+	#aqiGraph {
+		padding: 10px;
+	}
+}
