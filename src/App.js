@@ -16,6 +16,7 @@ class App extends Component {
 				<div className='App'>
 					<Container fluid>
 						<Navbar />
+						<Route path='/' component={Home} />
 						<Route path='/home' component={Home} />
 						<Route path='/iaura' component={AboutUs} />
 						<Route path='/team' component={Team} />
