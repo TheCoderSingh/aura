@@ -1,0 +1,39 @@
+@import '../../App.scss';
+
+.dashboard {
+	justify-items: center;
+}
+
+.dashboard-box {
+	height: 200px;
+	width: 200px;
+	background-color: $secondary-color;
+	text-align: center;
+	margin: 40px auto;
+	color: #fff;
+	border-radius: 50% 0 0 0;
+	position: relative;
+}
+
+.dashboard-box h4 {
+	font-size: 1em;
+	text-align: right;
+	margin: 10px;
+	padding-top: 10px;
+}
+
+.dashboard-icon img {
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	width: 80px;
+}
+
+.dashboard-box p ul {
+	list-style-type: none;
+	padding: 20px;
+}
+
+.dashboard-box p ul li {
+	padding: 10px;
+}

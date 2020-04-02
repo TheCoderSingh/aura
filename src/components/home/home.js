@@ -3,6 +3,7 @@ import Header from '../header/header';
 import Filter from '../filters/Filter';
 import Mailing from '../mailing/mailing';
 import GoogleMap from '../map/GoogleMap';
+import Dashboard from '../dashboard/dashboard';
 
 class Home extends Component {
 	render() {
@@ -10,6 +11,7 @@ class Home extends Component {
 			<div>
 				<Header />
 				<Filter />
+				<Dashboard />
 				<GoogleMap />
 				<Mailing />
 			</div>
