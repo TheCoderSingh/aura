@@ -26,7 +26,7 @@ class Team extends Component {
 
                     <Col md={2} className="teamCol">
 
-                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/isha.jpg'} width="160" height="160" roundedCircle />
+                        <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/Isha.jpg'} width="160" height="160" roundedCircle />
                         <h6>Isha</h6>
                         <hr className="hr2"></hr>
                         Full-Stack Developer

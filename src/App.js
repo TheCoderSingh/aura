@@ -12,7 +12,7 @@ import Home from './components/home/home';
 class App extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<div className='App'>
 					<Container fluid>
 						<Navbar />

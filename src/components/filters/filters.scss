@@ -59,9 +59,14 @@
 
 	.filters-box form {
 		padding: 40px 40px;
+		min-width: 200px;
 	}
 
 	#aqiGraph {
 		padding: 10px;
+	}
+
+	.filters-box select {
+		min-width: 200px;
 	}
 }
