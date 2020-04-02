@@ -12,7 +12,7 @@ class NavbarTop extends Component {
 					<Row>
 						<Col xs={9}>
 							<div className="logo">
-								{/* <img src={process.env.PUBLIC_URL + '/images/logo.png'} /> */}
+								<img src={process.env.PUBLIC_URL + '/images/logo.png'} />
 							</div>
 						</Col>
 						<Col xs={3}>
