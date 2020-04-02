@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/aura/static/css/main.3c4514d1.chunk.css",
-    "main.js": "/aura/static/js/main.6dca2d49.chunk.js",
-    "main.js.map": "/aura/static/js/main.6dca2d49.chunk.js.map",
+    "main.js": "/aura/static/js/main.cc6edde1.chunk.js",
+    "main.js.map": "/aura/static/js/main.cc6edde1.chunk.js.map",
     "runtime-main.js": "/aura/static/js/runtime-main.39404d49.js",
     "runtime-main.js.map": "/aura/static/js/runtime-main.39404d49.js.map",
     "static/js/2.ffc8345a.chunk.js": "/aura/static/js/2.ffc8345a.chunk.js",
     "static/js/2.ffc8345a.chunk.js.map": "/aura/static/js/2.ffc8345a.chunk.js.map",
     "index.html": "/aura/index.html",
-    "precache-manifest.2ba89c33b78813e17a7ad83fde0aec0d.js": "/aura/precache-manifest.2ba89c33b78813e17a7ad83fde0aec0d.js",
+    "precache-manifest.6e2dc7a675daa15e6538785209f8b54a.js": "/aura/precache-manifest.6e2dc7a675daa15e6538785209f8b54a.js",
     "service-worker.js": "/aura/service-worker.js",
     "static/css/main.3c4514d1.chunk.css.map": "/aura/static/css/main.3c4514d1.chunk.css.map",
     "static/js/2.ffc8345a.chunk.js.LICENSE.txt": "/aura/static/js/2.ffc8345a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.39404d49.js",
     "static/js/2.ffc8345a.chunk.js",
     "static/css/main.3c4514d1.chunk.css",
-    "static/js/main.6dca2d49.chunk.js"
+    "static/js/main.cc6edde1.chunk.js"
   ]
 }
