@@ -10,7 +10,7 @@ class Header extends Component {
 					<header>
 						<Col>
 							<video autoPlay loop muted>
-								<source type="video/mp4" src={process.env.PUBLIC_URL + '/video.mp4'}></source>
+								<source type="video/mp4" src={process.env.PUBLIC_URL + '/video2.mp4'}></source>
 							</video>
 						</Col>
 						<div className="headerText">

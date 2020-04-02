@@ -10,16 +10,16 @@ class NavbarTop extends Component {
 			<div>
 				<div className="navbarTop">
 					<Row>
-						<Col xs={9}>
+						<Col xs={8}>
 							<div className="logo">
 								<img src={process.env.PUBLIC_URL + '/images/logo.png'} />
 							</div>
 						</Col>
-						<Col xs={3}>
+						<Col xs={4}>
 							<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
 								<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 								<Navbar.Collapse id="responsive-navbar-nav">
-									<Nav className="mr-auto">
+									<Nav>
 										<Link to="/home">Home</Link>
 										<Link to="/iaura">iAura</Link>
 										<Link to="/team">Team</Link>

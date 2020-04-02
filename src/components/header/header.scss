@@ -14,20 +14,20 @@ video {
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-15%);
 }
 
 header {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	min-height: 500px;
 }
 
 .headerText {
 	width: 100%;
-	margin: 0 auto;
+	margin: 8em auto;
 	display: inline-flex;
-	margin-top: 4em;
 }
 
 .headerText-left {
@@ -35,12 +35,16 @@ header {
 }
 
 .headerText-left h1 {
-	color: $accent-color;
+	color: #fff;
 	font-size: 3em;
 }
 
 .headerText-left p {
-	color: $accent-color;
+	color: #fff;
+	text-align: right;
+	font-size: 20px;
+	width: 70%;
+	display: inline-flex;
 }
 
 .headerText-right {
