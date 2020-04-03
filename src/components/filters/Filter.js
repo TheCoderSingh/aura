@@ -5,6 +5,7 @@ import './filters.scss';
 import Country from './Country';
 import State from './State';
 import City from './City';
+import Dashboard from '../dashboard/dashboard';
 
 let states = [];
 let cities = [];
@@ -23,7 +24,8 @@ class Filter extends Component {
 		selectedCity: "",
 		dateSelected: false,
 		selectedDate: "",
-		aqi: ""
+		aqi: "",
+		minDate: ""
 	};
 
 	async componentDidMount() {
@@ -112,11 +114,8 @@ class Filter extends Component {
 	};
 
 	saveDate = () => {
-		console.log("Works..");
 		let dateSel = document.getElementById("date-sel");
 		let selectedDate = dateSel.value;
-
-		console.log(selectedDate);
 
 		if (selectedDate !== "yyyy-mm-dd") {
 			this.setState({
@@ -132,6 +131,12 @@ class Filter extends Component {
 		}
 	};
 
+	callback = (minAqiDate) => {
+		this.setState({
+			minDate: minAqiDate
+		})
+	}
+
 	async checkAqi(cityName) {
 		const token = "0eb4bf0012292cbdc57e682530d1f6a352894d7e";
 		const city = cityName;
@@ -141,7 +146,7 @@ class Filter extends Component {
 			.then(res => res.json())
 			.then((data) => {
 				aqi = data.data.aqi;
-				console.log(aqi);
+
 				if (aqi !== undefined) {
 					this.setState({
 						aqi: aqi
@@ -186,9 +191,10 @@ class Filter extends Component {
 						</div>
 					</Col>
 					<Col xs={8}>
-						<Graph data={this.state.aqi} date={this.state.selectedDate} />
+						<Graph data={this.state.aqi} date={this.state.selectedDate} parentCallback={this.callback} />
 					</Col>
 				</Row>
+				<Dashboard minDate={this.state.minDate} />
 			</div >
 		)
 	}

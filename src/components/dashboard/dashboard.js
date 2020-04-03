@@ -41,10 +41,12 @@ class Dashboard extends Component {
 						<Col md={4}>
 							<div className="dashboard-box">
 								<div className="dashboard-icon">
-									<img src={process.env.PUBLIC_URL + '/images/'}></img>
+									<img src={process.env.PUBLIC_URL + '/images/btt.svg'}></img>
 								</div>
 								<h4>Best Travel Time</h4>
-								<p id="dashboard-traveltime"></p>
+								<p id="dashboard-traveltime">
+									{this.props.minDate}
+								</p>
 							</div>
 						</Col>
 					</Row>

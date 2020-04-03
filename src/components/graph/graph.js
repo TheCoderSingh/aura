@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
 import Chart from 'chart.js';
 import './graph.scss';
+import Dashboard from '../dashboard/dashboard';
 
 let aqis = [];
 let bgColors = [];
+let minIndex;
+let labels = [];
 
 class Graph extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// };
-
 	state = {
 		aqi: this.props.data,
 		date: this.props.date,
-		aqis: []
+		aqis: [],
+		minLabel: ""
 	};
+
+	sendMinDate = () => {
+		console.log(labels[minIndex]);
+		this.props.parentCallback(this.state.minLabel);
+	}
 
 	render() {
 		let aqiGraph = document.getElementById("aqiGraph");
-		let labels = [];
-
 		let year = this.state.date.substring(0, 4);
 		let month = this.state.date.substring(5, 7);
 		let day = this.state.date.substring(8, 10);
-
-		console.log(month);
 
 		let monthName;
 
@@ -66,7 +67,6 @@ class Graph extends Component {
 				monthName = "December";
 				break;
 			default:
-				console.log("Invalid month");
 				break;
 		}
 
@@ -109,7 +109,6 @@ class Graph extends Component {
 					monthName = "December";
 					return "January";
 				default:
-					console.log("Invalid month");
 					break;
 			}
 		};
@@ -139,8 +138,6 @@ class Graph extends Component {
 				} else
 					labels[i] = monthName + " " + (parseInt(day) + i - 1);
 			}
-
-			console.log(labels);
 		}
 
 		let chartData = {
@@ -151,6 +148,16 @@ class Graph extends Component {
 				barPercentage: 0.6
 			}]
 		};
+
+		if (labels[minIndex] !== "undefined") {
+			minIndex = aqis.indexOf(Math.min(...aqis));
+		}
+
+		if (this.state.minLabel !== labels[minIndex]) {
+			this.setState({
+				minLabel: labels[minIndex]
+			}, this.sendMinDate);
+		}
 
 		if (aqiGraph) {
 			new Chart(aqiGraph, {
@@ -169,7 +176,9 @@ class Graph extends Component {
 		}
 
 		return (
-			<canvas id="aqiGraph"></canvas>
+			<div>
+				<canvas id="aqiGraph"></canvas>
+			</div>
 		);
 	}
 
@@ -186,8 +195,6 @@ class Graph extends Component {
 				let rand = Math.floor(Math.random() * 6) + 2;
 				let rand2 = Math.floor(Math.random() * 2) + 1;
 
-				console.log(rand);
-
 				if (rand2 == 1)
 					aqis.push(aqis[0] + rand);
 				else
@@ -195,7 +202,7 @@ class Graph extends Component {
 			}
 
 			this.setState({
-				aqis: aqis
+				aqis: aqis,
 			});
 
 			for (let i = 0; i < 9; i++) {
@@ -206,8 +213,6 @@ class Graph extends Component {
 				if (aqis[i] >= 201) bgColors[i] = "#a64d79";
 				if (aqis[i] >= 301) bgColors[i] = "#cc0000";
 			}
-
-			console.log(bgColors);
 		}
 	}
 }
