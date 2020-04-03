@@ -1,12 +1,7 @@
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { GoogleApiWrapper } from 'google-maps-react';
 import { Component } from 'react';
 import './map.scss';
-
-const style = {
-	width: '100%',
-	maxHeight: '340px'
-}
 
 let map, waqiMapOverlay;
 

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './aboutus.scss';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 class AboutUs extends Component {
 	render() {
 		return (
 			<Row>
 				<div className="abtus">
-					<img src={process.env.PUBLIC_URL + '/images/aboutusbgfull.png'}></img>
+					<img src={process.env.PUBLIC_URL + '/images/aboutusbgfull.png'} alt="About Us"></img>
 					<p>
 						No matter where you go in the world, you can never hide yourself from air pollution. Poor air quality
 						is the major contributor to chronic diseases. Concerned with the environmental situation our team has come

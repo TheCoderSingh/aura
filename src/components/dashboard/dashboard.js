@@ -8,9 +8,6 @@ class Dashboard extends Component {
 		carryons: []
 	}
 	render() {
-		let rand = ("" + Math.random()).substring(2, 5);
-		let randArr = (rand).toString().split("").map(function (t) { return parseInt(t) });
-
 		return (
 			<Container>
 				<div className="dashboard">
@@ -18,7 +15,7 @@ class Dashboard extends Component {
 						<Col md={4}>
 							<div className="dashboard-box">
 								<div className="dashboard-icon">
-									<img src={process.env.PUBLIC_URL + '/images/precautions.svg'}></img>
+									<img src={process.env.PUBLIC_URL + '/images/precautions.svg'} alt="Precautions"></img>
 								</div>
 								<h4>Precautions</h4>
 								<div className="dashboard-items">
@@ -33,7 +30,7 @@ class Dashboard extends Component {
 						<Col md={4}>
 							<div className="dashboard-box">
 								<div className="dashboard-icon">
-									<img src={process.env.PUBLIC_URL + '/images/carryons.svg'}></img>
+									<img src={process.env.PUBLIC_URL + '/images/carryons.svg'} alt="Carry-Ons"></img>
 								</div>
 								<h4>Carry-Ons</h4>
 								<div className="dashboard-items">
@@ -48,7 +45,7 @@ class Dashboard extends Component {
 						<Col md={4}>
 							<div className="dashboard-box">
 								<div className="dashboard-icon">
-									<img src={process.env.PUBLIC_URL + '/images/btt.svg'}></img>
+									<img src={process.env.PUBLIC_URL + '/images/btt.svg'} alt="Best Travel Time"></img>
 								</div>
 								<h4>Best Travel Time</h4>
 								<div id="dashboard-traveltime">

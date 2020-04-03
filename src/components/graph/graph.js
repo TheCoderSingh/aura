@@ -16,7 +16,6 @@ class Graph extends Component {
 	};
 
 	sendMinDate = () => {
-		console.log(labels[minIndex]);
 		this.props.parentCallback(this.state.minLabel);
 	}
 
@@ -114,13 +113,13 @@ class Graph extends Component {
 
 		for (let i = 0; i < 10; i++) {
 			let maxDays;
-			if (month != 2) {
-				if ((month % 2 != 0 && month <= 7) || (month % 2 == 0 && month > 7))
+			if (month !== 2) {
+				if ((month % 2 !== 0 && month <= 7) || (month % 2 === 0 && month > 7))
 					maxDays = 31;
 				else
 					maxDays = 30
 			} else {
-				if (year % 4 == 0)
+				if (year % 4 === 0)
 					maxDays = 29;
 				else
 					maxDays = 28;
@@ -194,7 +193,7 @@ class Graph extends Component {
 				let rand = Math.floor(Math.random() * 6) + 2;
 				let rand2 = Math.floor(Math.random() * 2) + 1;
 
-				if (rand2 == 1)
+				if (rand2 === 1)
 					aqis.push(aqis[0] + rand);
 				else
 					aqis.push(aqis[0] - rand);
