@@ -125,52 +125,54 @@ class Graph extends Component {
 					maxDays = 28;
 			}
 
-			let curDate = new Date();
-			labels[0] = monthName + " " + curDate.getDate();
-			labels[1] = monthName + " " + day;
+			if (monthName !== undefined) {
+				let curDate = new Date();
+				labels[0] = monthName + " " + curDate.getDate();
+				labels[1] = monthName + " " + day;
 
-			for (let i = 2; i <= 8; i++) {
-				if ((parseInt(day) + i - 1) > maxDays) {
-					let newMonthName = getNewMonthName(month);
-					labels[i] = newMonthName + " " + (parseInt(day) + (i - 1) - maxDays);
-				} else
-					labels[i] = monthName + " " + (parseInt(day) + i - 1);
-			}
-		}
-
-		let chartData = {
-			labels: labels,
-			datasets: [{
-				data: aqis,
-				backgroundColor: bgColors,
-				barPercentage: 0.6
-			}]
-		};
-
-		if (labels[minIndex] !== "undefined") {
-			minIndex = aqis.indexOf(Math.min(...aqis));
-		}
-
-		if (this.state.minLabel !== labels[minIndex]) {
-			this.setState({
-				minLabel: labels[minIndex]
-			}, this.sendMinDate);
-		}
-
-		if (aqiGraph) {
-			new Chart(aqiGraph, {
-				type: 'bar',
-				data: chartData,
-				options: {
-					legend: {
-						display: false
-					},
-					title: {
-						display: true,
-						text: 'AQI Index'
-					}
+				for (let i = 2; i <= 8; i++) {
+					if ((parseInt(day) + i - 1) > maxDays) {
+						let newMonthName = getNewMonthName(month);
+						labels[i] = newMonthName + " " + (parseInt(day) + (i - 1) - maxDays);
+					} else
+						labels[i] = monthName + " " + (parseInt(day) + i - 1);
 				}
-			});
+			}
+
+			let chartData = {
+				labels: labels,
+				datasets: [{
+					data: aqis,
+					backgroundColor: bgColors,
+					barPercentage: 0.6
+				}]
+			};
+
+			if (labels[minIndex] !== "undefined") {
+				minIndex = aqis.indexOf(Math.min(...aqis));
+			}
+
+			if (this.state.minLabel !== labels[minIndex]) {
+				this.setState({
+					minLabel: labels[minIndex]
+				}, this.sendMinDate);
+			}
+
+			if (aqiGraph) {
+				new Chart(aqiGraph, {
+					type: 'bar',
+					data: chartData,
+					options: {
+						legend: {
+							display: false
+						},
+						title: {
+							display: true,
+							text: 'AQI Index'
+						}
+					}
+				});
+			}
 		}
 
 		return (
