@@ -70,7 +70,7 @@ class GoogleMap extends Component {
 
 			map = new window.google.maps.Map(document.getElementById('map'), {
 				center: latlng,
-				zoom: 12,
+				zoom: 9,
 				mapTypeId: window.google.maps.MapTypeId.ROADMAP,
 			});
 
