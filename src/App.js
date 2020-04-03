@@ -8,6 +8,7 @@ import ContactUs from './components/contactus/contactus';
 import IAuraTabs from './components/iauratabs/iauratabs';
 import Team from './components/team/team';
 import Home from './components/home/home';
+import References from './components/references/references';
 
 class App extends Component {
 	render() {
@@ -21,6 +22,7 @@ class App extends Component {
 						<Route path='/iaura' component={IAuraTabs} />
 						<Route path='/team' component={Team} />
 						<Route path='/contact' component={ContactUs} />
+						<Route path='/references' component={References} />
 						<Footer />
 					</Container>
 				</div>
