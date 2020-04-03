@@ -1,24 +1,39 @@
 @import '../../App.scss';
 
-.outer_box {
-	background-color: $secondary-color;
-	margin-left: 30%;
-	margin-right: 30%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 40px 40px 40px 40px;
-	border-radius: 5px;
-	color: blanchedalmond;
-}
+// .outer_box {
+// 	background-color: $secondary-color;
+// 	margin-left: 30%;
+// 	margin-right: 30%;
+// 	margin-top: 20px;
+// 	margin-bottom: 20px;
+// 	padding: 40px 40px 40px 40px;
+// 	border-radius: 5px;
+// 	color: blanchedalmond;
+// }
 
-.inner_box {
-	// background-color: $background1-color;
-	background-color: $secondary-color;
-	color: $secondary-color;
-	margin-top: 10px; 
-	padding: 20px;  
-}
+// .inner_box {
+// 	color: $secondary-color;
+// 	margin-top: 10px; 
+// 	padding: 20px;  
+// }
 
 p {
 	text-align: center;
+}
+
+.abtus {
+	position: relative;
+	margin: 40px auto;
+}
+
+.abtus img {
+	width: 400px;
+}
+
+.abtus p {
+	position: absolute;
+	z-index: 1;
+	top: 30%;
+	color: #fff;
+	padding: 20px;
 }

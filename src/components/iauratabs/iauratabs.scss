@@ -1,30 +1,9 @@
 @import '../../App.scss';
 
-.tabrow
-{
+.tabrow {
     margin: 5% 20% 5% 20%;
 }
 
-.teamCol p{
-    
-    text-align: left;
-    padding: 5px;
-    margin: 0;
-    font-size: 0.8em;
-    font-weight: bold;
-    color: $secondary-color;
-}   
-
-.teamCol
-{
-    border: 1px solid $secondary-color;
-    padding: 5px;
-}
-
-.price
-{
+.price {
     color: red !important; 
 }
-
-
-

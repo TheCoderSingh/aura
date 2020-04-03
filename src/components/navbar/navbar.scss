@@ -32,10 +32,16 @@
 @media only screen and (max-width: 920px) {
 	.navbar a {
 		padding: 15px 0;
+		border-bottom: 2px solid;
 	}
 
 	.navbarTop .col-4 {
 		width: 100%;
 		max-width: 100%;
+	}
+
+	.navbar {
+		justify-content: flex-end;
+    	margin: 15px 0;
 	}
 }

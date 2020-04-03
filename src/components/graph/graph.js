@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Chart from 'chart.js';
 import './graph.scss';
-import Dashboard from '../dashboard/dashboard';
 
 let aqis = [];
 let bgColors = [];

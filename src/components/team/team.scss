@@ -1,7 +1,6 @@
 @import '../../App.scss';
 
-.teamCol
-{
+.teamCol {
     text-align: center;
     color: $secondary-color;
     font-style: bold;
@@ -9,24 +8,21 @@
     justify-items:  center;
 }
 
-.teamImg
-{
+.teamImg {
     border: 1px solid $secondary-color;
     padding: 10px;
     margin-bottom: 15px;
 }
-.teamRow
-{
+.teamRow {
     justify-content: center;
 }
 
-.teamCol hr
-{   
+.teamCol hr {   
     width: 45px;
     height: 2px;
 }
 
-.teamCol div{
+.teamCol div {
     margin: 0;
     padding: 0;
     color: burlywood;
@@ -34,23 +30,20 @@
     font-size: 13px;
     height: 10%;
     align-content: center;
-    
 }
 
-.teamRow div{
+.teamRow div {
     margin: 30px;
 }
 
-hr
-{
+hr {
     background-color: $secondary-color;
     height: 1px;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-h7
-{
+h7 {
     font-style: italic;
     color: $secondary-color;
     font-size: 15px;

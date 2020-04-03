@@ -9,7 +9,7 @@ class Footer extends Component {
 				<Col>
 					<footer>
 						<p>Copyright &copy; 2020 - Aura</p>
-						<p>Terms & Conditions | All Rights Reserved</p>
+						<a href="#">References</a>
 					</footer>
 				</Col>
 			</Row>
