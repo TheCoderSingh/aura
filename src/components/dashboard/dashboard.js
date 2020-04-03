@@ -3,7 +3,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './dashboard.scss';
 
 class Dashboard extends Component {
+	state = {
+		precautions: [],
+		carryons: []
+	}
 	render() {
+		let rand = ("" + Math.random()).substring(2, 5);
+		let randArr = (rand).toString().split("").map(function (t) { return parseInt(t) });
+
 		return (
 			<Container>
 				<div className="dashboard">
@@ -14,13 +21,13 @@ class Dashboard extends Component {
 									<img src={process.env.PUBLIC_URL + '/images/precautions.svg'}></img>
 								</div>
 								<h4>Precautions</h4>
-								<p id="dashboard-precautions">
+								<div className="dashboard-items">
 									<ul>
-										<li>Precaution 1</li>
-										<li>Precaution 2</li>
-										<li>Precaution 3</li>
+										{this.state.precautions.slice(0, 3).map(precaution =>
+											<li id={precaution.prec_id} key={precaution.prec_id}>{precaution.prec_desc}</li>
+										)}
 									</ul>
-								</p>
+								</div>
 							</div>
 						</Col>
 						<Col md={4}>
@@ -29,13 +36,13 @@ class Dashboard extends Component {
 									<img src={process.env.PUBLIC_URL + '/images/carryons.svg'}></img>
 								</div>
 								<h4>Carry-Ons</h4>
-								<p id="dashboard-carryons">
+								<div className="dashboard-items">
 									<ul>
-										<li>Carry-On 1</li>
-										<li>Carry-On 2</li>
-										<li>Carry-On 3</li>
+										{this.state.carryons.slice(0, 3).map(carryon =>
+											<li id={carryon.carryon_id} key={carryon.carryon_id}>{carryon.carryon_desc}</li>
+										)}
 									</ul>
-								</p>
+								</div>
 							</div>
 						</Col>
 						<Col md={4}>
@@ -44,9 +51,9 @@ class Dashboard extends Component {
 									<img src={process.env.PUBLIC_URL + '/images/btt.svg'}></img>
 								</div>
 								<h4>Best Travel Time</h4>
-								<p id="dashboard-traveltime">
-									{this.props.minDate}
-								</p>
+								<div id="dashboard-traveltime">
+									{this.props.minDate ? this.props.minDate : "Check AQI"}
+								</div>
 							</div>
 						</Col>
 					</Row>
@@ -54,6 +61,32 @@ class Dashboard extends Component {
 			</Container >
 		)
 	}
+
+	async componentDidMount() {
+		const precautionsUrl = "http://localhost:3002/api/precautions";
+		await fetch(precautionsUrl)
+			.then(res => res.json())
+			.then((data) => {
+				this.setState({
+					precautions: data
+				});
+			})
+			.catch((error) => {
+				console.log("Error fetching precautions: " + error);
+			});
+
+		const carryonsUrl = "http://localhost:3002/api/carryons";
+		await fetch(carryonsUrl)
+			.then(res => res.json())
+			.then((data) => {
+				this.setState({
+					carryons: data
+				});
+			})
+			.catch((error) => {
+				console.log("Error fetching carryons: " + error);
+			});
+	};
 }
 
 export default Dashboard;
