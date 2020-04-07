@@ -19,7 +19,7 @@ class Team extends Component {
                     <Col md={2} className="teamCol">
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/jaskaran2.jpg'} width="160" height="160" roundedCircle />
                         <h6>Jaskaran Singh</h6>
-                        <hr className="hr2"></hr>
+                        <hr className="hr2" />
                         Project Manager/Full-Stack developer
                         <div><a href="https://www.linkedin.com/in/TheCoderSingh/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
                     </Col>
@@ -28,27 +28,29 @@ class Team extends Component {
 
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/Isha.jpg'} width="160" height="160" roundedCircle />
                         <h6>Isha</h6>
-                        <hr className="hr2"></hr>
+                        <hr className="hr2" />
                         Full-Stack Developer
-                        <div><a href="facebook.com"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
+                        <br /><br />
+                        <div><a href="https://www.linkedin.com/in/isha-269b2358/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
 
                     </Col>
                     <Col md={2} className="teamCol">
 
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/ekroop.jpg'} width="160" height="160" roundedCircle />
                         <h6>Ekroop Kaur</h6>
-                        <hr className="hr2"></hr>
-                        UX Designer
-                        <div><a href="https://www.linkedin.com/in/ekroop-kaur-692400107/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
+                        <hr className="hr2" />
+                        UX/UI Designer/Content Strategist
+                        <div id="ekspecific"><a href="https://www.linkedin.com/in/ekroop-kaur-692400107/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
 
                     </Col>
                     <Col md={2} className="teamCol">
 
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/jashan.jpg'} width="160" height="160" roundedCircle />
                         <h6>Jashanpreet Kaur</h6>
-                        <hr></hr>
-                            UX Designer
-                            <div><a href="facebook.com"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
+                        <hr />
+                            UX/UI Designer
+                            <br /><br />
+                        <div><a href="https://www.linkedin.com/in/jashanpreet-kaur-371617186/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
                     </Col>
                 </Row>
                 <Row className="teamRow">
@@ -56,40 +58,43 @@ class Team extends Component {
 
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/meera.jpg'} width="160" height="160" roundedCircle />
                         <h6>Meera Sharma</h6>
-                        <hr></hr>
-                       UI Designer
-                        <div><a href="facebook.com"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
+                        <hr />
+                       UX Designer
+                       <br /><br />
+                        <div><a href="https://www.linkedin.com/in/meera-sharma-968797190/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
                     </Col>
                     <Col md={2} className="teamCol">
 
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/param2.jpeg'} width="160" height="160" roundedCircle />
                         <h6>Parminder Kaur</h6>
-                        <hr></hr>
-                       UX/UI/Graphic Designer
-                        <div><a href="facebook.com"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
+                        <hr />
+                       Web Responsive/UI Designer
+                        <div><a href="https://www.linkedin.com/in/parminder-kaur-433939a0/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
 
                     </Col>
                     <Col md={2} className="teamCol">
 
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/raman.png'} width="160" height="160" roundedCircle />
                         <h6>Ramandeep Kaur</h6>
-                        <hr></hr>
-                       UX Designer
-                        <div><a href="facebook.com"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
+                        <hr />
+                       UX/Ui Designer
+                       <br /><br />
+                        <div><a href="https://www.linkedin.com/in/ramandeep-kaur-6887411a1/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
 
                     </Col>
                     <Col md={2} className="teamCol">
 
                         <Image className="teamImg" src={process.env.PUBLIC_URL + '/images/var.jpg'} width="160" height="160" roundedCircle />
                         <h6>Varpreet Kaur</h6>
-                        <hr></hr>
-                       Quality Assurance
-                        <div><a href="facebook.com"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
+                        <hr />
+                       QA/UX Designer
+                        <br /><br />
+                        <div><a href="https://www.linkedin.com/in/varpreet-kaur-a47286196/"><Image width="30" height="30" alt="" src={process.env.PUBLIC_URL + '/images/linkedin.png'} /> </a></div>
 
                     </Col>
                 </Row>
                 <AboutUs />
-            </Container>
+            </Container >
         );
     }
 }

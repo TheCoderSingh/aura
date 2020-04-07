@@ -131,6 +131,7 @@ class Graph extends Component {
 				labels[1] = monthName + " " + day;
 
 				for (let i = 2; i <= 8; i++) {
+					// i - 1 for the accurate date (since arrays start from 0)
 					if ((parseInt(day) + i - 1) > maxDays) {
 						let newMonthName = getNewMonthName(month);
 						labels[i] = newMonthName + " " + (parseInt(day) + (i - 1) - maxDays);
@@ -148,6 +149,7 @@ class Graph extends Component {
 				}]
 			};
 
+			// Find for minimum AQI from the array
 			if (labels[minIndex] !== "undefined") {
 				minIndex = aqis.indexOf(Math.min(...aqis));
 			}
@@ -205,6 +207,7 @@ class Graph extends Component {
 				aqis: aqis,
 			});
 
+			// Set colors for bars according to the AQI
 			for (let i = 0; i < 9; i++) {
 				if (aqis[i] >= 0) bgColors[i] = "#00ff00";
 				if (aqis[i] >= 51) bgColors[i] = "#ffff00";

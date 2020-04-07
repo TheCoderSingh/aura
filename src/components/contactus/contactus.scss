@@ -4,7 +4,7 @@
     box-shadow: black;
     border: solid 1px darkgray;
     padding: 5%;
-    width: 80%;
+    width: 50%;
     top: 20%;
     left: 30%;
     right: 30%;
@@ -19,4 +19,10 @@
 .contact_btn {
     width: 100%;
     background-color: $secondary-color;
+}
+
+@media only screen and (max-width: 920px) {
+    .contactForm {
+        width: 80%;
+    }
 }

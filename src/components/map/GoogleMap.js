@@ -55,6 +55,7 @@ class GoogleMap extends Component {
 					break;
 			}
 
+			// Set a default location in case the user denies the request for location
 			this.setState({
 				latitute: "49.282730",
 				longitude: "-123.120735"
@@ -74,6 +75,7 @@ class GoogleMap extends Component {
 				mapTypeId: window.google.maps.MapTypeId.ROADMAP,
 			});
 
+			// Tile Overlay
 			waqiMapOverlay = new window.google.maps.ImageMapType({
 				getTileUrl: function (coord, zoom) {
 					return 'https://tiles.aqicn.org/tiles/usepa-aqi/' + zoom + "/" + coord.x + "/" + coord.y + ".png?token=0eb4bf0012292cbdc57e682530d1f6a352894d7e";

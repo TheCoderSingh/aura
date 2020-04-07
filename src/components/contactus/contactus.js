@@ -28,7 +28,7 @@ class ContactUs extends Component {
 					<Form.Control as="textarea" rows="7" placeholder="Message *" />
 				</Form.Group>
 
-				<Button className="contact_btn" variant="primary" type="submit">
+				<Button className="contact_btn" variant="primary" type="button">
 					Submit
 				</Button>
 			</Form>

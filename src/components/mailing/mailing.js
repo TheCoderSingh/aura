@@ -15,7 +15,7 @@ class Mailing extends Component {
 								<Form.Group as={Col}>
 									<Form.Control type="email" placeholder="Enter your email here" id="mailingInp" />
 								</Form.Group>
-								<Button variant="primary" type="submit" id="mailingBtn">
+								<Button variant="primary" type="button" id="mailingBtn">
 									Submit
  							</Button>
 							</Form>

@@ -20,6 +20,7 @@ class Dashboard extends Component {
 								<h4>Precautions</h4>
 								<div className="dashboard-items">
 									<ul>
+										{/* Display first three precautions */}
 										{this.state.precautions.slice(0, 3).map(precaution =>
 											<li id={precaution.prec_id} key={precaution.prec_id}>{precaution.prec_desc}</li>
 										)}
@@ -35,6 +36,7 @@ class Dashboard extends Component {
 								<h4>Carry-Ons</h4>
 								<div className="dashboard-items">
 									<ul>
+										{/* Display first three carryons */}
 										{this.state.carryons.slice(0, 3).map(carryon =>
 											<li id={carryon.carryon_id} key={carryon.carryon_id}>{carryon.carryon_desc}</li>
 										)}
@@ -60,7 +62,7 @@ class Dashboard extends Component {
 	}
 
 	async componentDidMount() {
-		const precautionsUrl = "http://localhost:3002/api/precautions";
+		const precautionsUrl = "http://aura.wmdd.ca/api/precautions";
 		await fetch(precautionsUrl)
 			.then(res => res.json())
 			.then((data) => {
@@ -72,7 +74,7 @@ class Dashboard extends Component {
 				console.log("Error fetching precautions: " + error);
 			});
 
-		const carryonsUrl = "http://localhost:3002/api/carryons";
+		const carryonsUrl = "http://aura.wmdd.ca/api/carryons";
 		await fetch(carryonsUrl)
 			.then(res => res.json())
 			.then((data) => {

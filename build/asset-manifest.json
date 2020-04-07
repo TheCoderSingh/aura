@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/aura/static/css/main.56aa282d.chunk.css",
-    "main.js": "/aura/static/js/main.39d11b91.chunk.js",
-    "main.js.map": "/aura/static/js/main.39d11b91.chunk.js.map",
-    "runtime-main.js": "/aura/static/js/runtime-main.39404d49.js",
-    "runtime-main.js.map": "/aura/static/js/runtime-main.39404d49.js.map",
-    "static/js/2.ea1bbd82.chunk.js": "/aura/static/js/2.ea1bbd82.chunk.js",
-    "static/js/2.ea1bbd82.chunk.js.map": "/aura/static/js/2.ea1bbd82.chunk.js.map",
-    "index.html": "/aura/index.html",
-    "precache-manifest.218213325a65067e877baf276de4e6f2.js": "/aura/precache-manifest.218213325a65067e877baf276de4e6f2.js",
-    "service-worker.js": "/aura/service-worker.js",
-    "static/css/main.56aa282d.chunk.css.map": "/aura/static/css/main.56aa282d.chunk.css.map",
-    "static/js/2.ea1bbd82.chunk.js.LICENSE.txt": "/aura/static/js/2.ea1bbd82.chunk.js.LICENSE.txt",
-    "static/media/f1.jpg": "/aura/static/media/f1.09ea2fa8.jpg",
-    "static/media/f4.jpg": "/aura/static/media/f4.00a10b7d.jpg",
-    "static/media/mask1.jpg": "/aura/static/media/mask1.e1753b33.jpg",
-    "static/media/mask2.png": "/aura/static/media/mask2.7183f2d8.png",
-    "static/media/mask3.jpg": "/aura/static/media/mask3.729ec69b.jpg",
-    "static/media/mask6.jpg": "/aura/static/media/mask6.bcc7ec08.jpg",
-    "static/media/san2.jpg": "/aura/static/media/san2.1222fde7.jpg"
+    "main.css": "./static/css/main.41fa4b99.chunk.css",
+    "main.js": "./static/js/main.ae70362f.chunk.js",
+    "main.js.map": "./static/js/main.ae70362f.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.14adf919.js",
+    "runtime-main.js.map": "./static/js/runtime-main.14adf919.js.map",
+    "static/js/2.fae3f1d2.chunk.js": "./static/js/2.fae3f1d2.chunk.js",
+    "static/js/2.fae3f1d2.chunk.js.map": "./static/js/2.fae3f1d2.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.75e6ea1e68e7e16a936d35361a049768.js": "./precache-manifest.75e6ea1e68e7e16a936d35361a049768.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.41fa4b99.chunk.css.map": "./static/css/main.41fa4b99.chunk.css.map",
+    "static/js/2.fae3f1d2.chunk.js.LICENSE.txt": "./static/js/2.fae3f1d2.chunk.js.LICENSE.txt",
+    "static/media/f1.jpg": "./static/media/f1.09ea2fa8.jpg",
+    "static/media/f4.jpg": "./static/media/f4.00a10b7d.jpg",
+    "static/media/mask1.jpg": "./static/media/mask1.e1753b33.jpg",
+    "static/media/mask2.png": "./static/media/mask2.7183f2d8.png",
+    "static/media/mask3.jpg": "./static/media/mask3.729ec69b.jpg",
+    "static/media/mask6.jpg": "./static/media/mask6.bcc7ec08.jpg",
+    "static/media/san2.jpg": "./static/media/san2.1222fde7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.39404d49.js",
-    "static/js/2.ea1bbd82.chunk.js",
-    "static/css/main.56aa282d.chunk.css",
-    "static/js/main.39d11b91.chunk.js"
+    "static/js/runtime-main.14adf919.js",
+    "static/js/2.fae3f1d2.chunk.js",
+    "static/css/main.41fa4b99.chunk.css",
+    "static/js/main.ae70362f.chunk.js"
   ]
 }

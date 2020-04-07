@@ -29,7 +29,7 @@ class Filter extends Component {
 	};
 
 	async componentDidMount() {
-		const countryUrl = "http://localhost:3002/api/countries";
+		const countryUrl = "http://aura.wmdd.ca/api/countries";
 		await fetch(countryUrl)
 			.then(res => res.json())
 			.then((data) => {
@@ -43,7 +43,7 @@ class Filter extends Component {
 	};
 
 	async getStates(id) {
-		const statesUrl = "http://localhost:3002/api/states/" + id;
+		const statesUrl = "http://aura.wmdd.ca/api/states/" + id;
 		await fetch(statesUrl)
 			.then(res => res.json())
 			.then((data) => {
@@ -60,7 +60,7 @@ class Filter extends Component {
 	};
 
 	async getCities(id) {
-		const citiesUrl = "http://localhost:3002/api/cities/" + id;
+		const citiesUrl = "http://aura.wmdd.ca/api/cities/" + id;
 		await fetch(citiesUrl)
 			.then(res => res.json())
 			.then((data) => {
